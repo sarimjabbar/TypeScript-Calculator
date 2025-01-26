@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+        }
+        .calculator {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .output {
+            background: #e9e9f0;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: right;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #f4f4f4;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #dcdce3;
+        }
+        .bg-red {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .bg-red:hover {
+            background: #f5c6cb;
+        }
+        .bg-green {
+            background: #d4edda;
+            color: #155724;
+        }
+        .bg-green:hover {
+            background: #c3e6cb;
+        }
+  </style>
+    
+    <div class="calculator">
+        <div class="output">
+          <span id="target" class="result"></span>
+        </div>
+        <div class="buttons">
+          <button onclick="addvalue('1')">1</button>
+          <button onclick="addvalue('2')">2</button>
+          <button onclick="addvalue('3')">3</button>
+          <button onclick="addvalue('+')">+</button>
+          <button onclick="addvalue('4')">4</button>
+          <button onclick="addvalue('5')">5</button>
+          <button onclick="addvalue('6')">6</button>
+          <button onclick="addvalue('-')">-</button>
+          <button onclick="addvalue('7')">7</button>
+          <button onclick="addvalue('8')">8</button>
+          <button onclick="addvalue('9')">9</button>
+          <button onclick="addvalue('*')">*</button>
+          <button onclick="clearDis('0')" class="bg-red">C</button>
+          <button onclick="addvalue('0')">0</button>
+          <button onclick="calcul()" class="bg-green">=</button>
+          <button onclick="addvalue('/')">/</button>
+        </div>
+      </div>
+<script src="app.js"></script>
+</body>
+</html>
